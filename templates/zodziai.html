@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Žodžiai{% endblock %}
+
+
+{% block content %}
+<h1>Žodžiai:</h1>
+{% for x in range(5) %}
+<p>{{ zodis }}</p>
+<hr>
+{% endfor %}
+{% endblock %}

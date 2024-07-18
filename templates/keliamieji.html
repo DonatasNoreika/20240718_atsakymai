@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Keliamieji{% endblock %}
+
+
+{% block content %}
+<h1>Keliamieji metai nuo 1900 iki 2100:</h1>
+{% for metai in range(1900, 2101) %}
+{% if isleap(metai) %}
+<p>{{ metai }}</p>
+{% endif %}
+{% endfor %}
+{% endblock %}
