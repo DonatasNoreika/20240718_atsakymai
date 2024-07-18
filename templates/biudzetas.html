@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Biudžetas{% endblock %}
+
+
+{% block content %}
+<h1>Biudžetas:</h1>
+<h5>Balansas:</h5>
+<p>{{ balansas }}</p>
+<h5>Žurnalo įrašai:</h5>
+{% for irasas in zurnalas %}
+<p>{{ irasas }}</p>
+<hr>
+{% endfor %}
+<h5>Įveskite įrašą:</h5>
+<form action="#" method="post">
+    <p>Suma:</p>
+    <p><input type="text" name="amount"></p>
+    <p>Tipas:</p>
+    <p><input type="text" name="type"></p>
+    <p><input type="submit" value="Pateikti"></p>
+</form>
+{% endblock %}
